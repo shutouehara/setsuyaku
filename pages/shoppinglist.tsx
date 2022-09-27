@@ -43,7 +43,6 @@ const ShoppingList: NextPageWithLayout = () => {
   };
 
   const handleDelete = (item:ShoppingListType):void => {
-    // const itemList = list.concat();
     const itemList = list.filter(p => p.id !== item.id);
     setList(itemList);
     localStorage.setItem('setsuyaku_shopping_list', JSON.stringify(itemList));
@@ -63,7 +62,7 @@ const ShoppingList: NextPageWithLayout = () => {
           </section>
           <section className='my-5'>
             <h2>一覧</h2>
-            <ul className="di-flex justify-content-between my-5">
+            <ul className="di-flex justify-content-between my-5 ps-0">
               { list.map( item => (
                 <ListItem
                   key={item.id}

@@ -5,3 +5,30 @@ export type ShoppingListType = {
   done: boolean
   date: string
 }
+
+export type SaiyasuList = {
+  id: string
+  itemName: string
+  price: number
+  shop: string
+  createdAt: Date
+  effectiveUntil: Date
+  category: string
+}
+
+export type SaiyasItemType = {
+  id: string
+  itemName: string
+  price: number
+  shop: string | null
+  place: string
+  effectiveUntil: Date | null
+  category: string | null
+  registeredBy: string | 'Nobody'
+  createdAt: Date
+  like: number
+  more: number
+  bad: number
+  others: string | null
+  about: string[]
+}

@@ -14,8 +14,8 @@ const About: NextPageWithLayout = () => {
         <div className="pb-5 mb-5 d-grid gap-2">
           <h1 className='text-center'>このアプリについて</h1>
           <h2 className='text-center fs-4 mt-4'>管理者</h2>
-          <p>アプリの管理者は、次の者です。<Link href="https://shutouehara.com/profile">https://shutouehara.com/profile</Link></p>
-          <p>普段はサイト制作などを行なっています。</p>
+          <p className='text-center'>アプリの管理者は、次の者です。<Link href="https://shutouehara.com/profile">https://shutouehara.com/profile</Link></p>
+          <p className='text-center'>普段はサイト制作などを行なっています。</p>
           <h2 className='text-center fs-4 mt-4'>目的</h2>
           <p>このアプリは、最安商品を店舗毎に比較し、買い物に役立てるために制作しました。</p>
           <p>ぜひ、お得だった商品とその価格を保存してください。</p>

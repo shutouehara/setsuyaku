@@ -1,8 +1,25 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import SignIn from './SignIn';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, authState } from '../pages/api/firebase';
+import SignOut from './SignOut';
 
 export default function Layout({ children }: { children?: ReactNode}) {
+  const [user, loading, error] = useAuthState(authState);
+  const userState = () => {
+    if(loading) {
+      return '';
+    }
+    if(error) {
+      return <p>error</p>
+    }
+    if(user) {
+      return <SignOut />;
+    }
+    return <SignIn />
+  }
   return (
     <div className='d-flex align-content-stretch flex-wrap' style={{height:'100vh'}}>
       <Head>
@@ -14,9 +31,8 @@ export default function Layout({ children }: { children?: ReactNode}) {
         <Link href="/">
           <h1 className='mb-0 p-2 border border-2 rounded fs-5'>セツヤク‼️</h1>
         </Link>
-        <Link href="/mypage">
-          <p className='mb-0 p-2 border border-2 rounded fs-6 d-none'>マイページ</p>
-        </Link>
+        {/* {user ? <SignOut /> : <SignIn />} */}
+        {userState()}
       </header>
 
       {children}
