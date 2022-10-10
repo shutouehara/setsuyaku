@@ -6,9 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
-import serchIcon from '/public/search_icon.webp';
-import saveIcon from '/public/save_icon.webp';
-import addIcon from '/public/add_icon.webp';
+import serchIcon from '../public/search_icon.webp';
+import saveIcon from '../public/save_icon.webp';
+import addIcon from '../public/add_icon.webp';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -23,13 +23,8 @@ const Home: NextPageWithLayout = () => {
           <div className={`align-self-center d-flex ${styles.menu_icon_wrapper}`}>
             <Link href="/search">
               <div className='d-flex pe-auto'>
-                <p className={`p-3 d-flex align-items-center border border-3 border-dark rounded-circle bg-white me-3 ${styles.menu_icon}`}>
-                  <Image
-                    src={serchIcon}
-                    width={64}
-                    height={64}
-                    className={styles.menu_icon}
-                  />
+                <p className={`p-3 d-flex align-items-center border border-3 border-dark rounded-circle me-3 relative ${styles.menu_icon} ${styles.search}`}>
+                  s
                 </p>
                 <p className={`text-center align-self-center lh-sm`}>安いの<br />探す</p>
               </div>
@@ -38,13 +33,8 @@ const Home: NextPageWithLayout = () => {
           <div className={`align-self-center d-flex justify-content-end ${styles.menu_icon_wrapper}`}>
             <Link href="/register">
               <div className='d-flex pe-auto'>
-                <p className={`p-3 d-flex align-items-center border border-3 border-dark rounded-circle bg-white me-3 ${styles.menu_icon}`}>
-                  <Image
-                    src={saveIcon}
-                    width={64}
-                    height={64}
-                    className={styles.menu_icon}
-                  />
+                <p className={`p-3 d-flex align-items-center border border-3 border-secondary rounded-circle me-3 relative ${styles.menu_icon} ${styles.register}`}>
+                  r
                 </p>
                 <p className={`text-center align-self-center lh-sm`}>安いの<br />登録する</p>
               </div>
@@ -53,13 +43,8 @@ const Home: NextPageWithLayout = () => {
           <div className={`align-self-center d-flex ${styles.menu_icon_wrapper}`}>
             <Link href="/shoppinglist">
               <div className='d-flex pe-auto'>
-                <p className={`p-3 d-flex align-items-center border border-3 border-dark rounded-circle bg-white me-3 ${styles.menu_icon}`}>
-                  <Image
-                    src={addIcon}
-                    width={64}
-                    height={64}
-                    className={styles.menu_icon}
-                  />
+                <p className={`p-3 d-flex align-items-center border border-3 border-dark rounded-circle me-3 relative ${styles.menu_icon} ${styles.shopping}`}>
+                  s
                 </p>
                 <p className={`text-center align-self-center lh-sm`}>これ買う</p>
               </div>

@@ -32,7 +32,7 @@ const Register: NextPageWithLayout = () => {
           shop: shop,
           place: '',
           effectiveUntil: '',
-          category: '',
+          category: category,
           registeredBy: '',
           createdAt: new Date(),
           like: 0,

@@ -49,6 +49,28 @@
   padding: 8px; */
   filter: invert(1);
   width: 80px;
+  color: transparent;
+}
+.search:after,
+.register:after,
+.shopping:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 80%;
+  height: 80%;
+}
+.search:after {
+  background: center / 80% no-repeat url(../public/save_icon.webp);
+}
+.register:after {
+  background: center / 80% no-repeat url(../public/search_icon.webp);
+}
+.shopping:after {
+  background: center / 80% no-repeat url(../public/add_icon.webp);
 }
 
 .footer {
@@ -168,5 +190,11 @@
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .menu_icon {
+    background: #ffffffa8;
   }
 }

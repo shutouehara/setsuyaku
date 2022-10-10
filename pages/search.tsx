@@ -115,7 +115,7 @@ const Search: NextPageWithLayout = () => {
                     {effectiveUntil && <p className="card-text">有効期限：{new Date(effectiveUntil.seconds *1000).toLocaleDateString()}</p>}
                   </div>
                   {others && <p>備考<br/>{others}</p>}
-                  <p className="text-end">詳しくみる</p>
+                  {/* <p className="text-end">詳しくみる</p> */}
                 </div>
               </div>
             {/* <Link href={`/items/${id}`}>
@@ -123,9 +123,9 @@ const Search: NextPageWithLayout = () => {
             </li>
           ))}
         </ul>
-        <div className="text-center my-5">
+        {/* <div className="text-center my-5">
           <button className='border-white rounded bg-transparent w-50 mx-auto'>もっと見る</button>
-        </div>
+        </div> */}
       </SubLayout>
     </Layout>
   )
