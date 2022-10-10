@@ -32,7 +32,7 @@ export default function Layout({ children }: { children?: ReactNode}) {
           <h1 className='mb-0 p-2 border border-2 rounded fs-5'>セツヤク‼️</h1>
         </Link>
         {/* {user ? <SignOut /> : <SignIn />} */}
-        {userState()}
+        {/* {userState()} */}
       </header>
 
       {children}

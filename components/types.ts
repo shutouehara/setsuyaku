@@ -22,7 +22,7 @@ export type SaiyasItemType = {
   price: number
   shop: string | null
   place: string
-  effectiveUntil: Date | null
+  readonly effectiveUntil?: Date
   category: string | null
   registeredBy: string | 'Nobody'
   createdAt: Date
